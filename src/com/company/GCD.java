@@ -1,0 +1,21 @@
+package com.company;
+
+import java.util.*;
+
+public class GCD {
+    private static int gcd(int a, int b) {
+        if(b!=0) {
+            a=a % b;
+            return gcd(b,a);
+        }
+        return a;
+    }
+
+    public static void main(String args[]) {
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+
+        System.out.println(gcd(a, b));
+    }
+}
