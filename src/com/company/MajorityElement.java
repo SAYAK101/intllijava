@@ -11,6 +11,8 @@ public class MajorityElement {
         if (left + 1 == right) {
             return a[left];
         }
+
+        // m stores majority element (if present)
         int m = -1;
 
         // initialize counter i with 0
@@ -34,8 +36,14 @@ public class MajorityElement {
             else
                 i--;
         }
+        //System.out.println(m+":m i:"+i);
+        if(i==0)
+            return -1;
+        else
+            return m;
 
-        return m;
+
+
         //write your code here
         //return -1;
     }
